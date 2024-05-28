@@ -132,7 +132,7 @@ def argv_parse():
     elif op == "disphome":
         dispgreen(get_home_directory()+"\n")
     elif op == "help":
-        dispgreen("fpe 1.0\nCreated by codeeleven0\nTHIS SOFTWARE COMES WITH ABSOLUTELY NO WARRANTY!\n\nfpe [operation] [options]\n\n\tinstall [package/packages]\n\t\tInstalls packages.\n\trun [package]\n\t\tRuns a package from FPE Home.\n\tremove [package]\n\t\tRemoves package.\n\tpackage [name] [pyfile] [outfile]\n\t\tCreates FPE packages.\n\tdisphome\n\t\tDisplays FPE Home Directory.\n\thelp\n\t\tDisplays this message.\n\tsh\n\t\tInteractive Shell\n\tdown [p]\n\t\tDownload a package from registry.")
+        dispgreen("fpe 1.0\nCreated by codeeleven0\nTHIS SOFTWARE COMES WITH ABSOLUTELY NO WARRANTY!\n\nfpe [operation] [options]\n\n\tinstall [package/packages]\n\t\tInstalls packages.\n\trun [package]\n\t\tRuns a package from FPE Home.\n\tremove [package]\n\t\tRemoves package.\n\tpackage [name] [pyfile] [outfile]\n\t\tCreates FPE packages.\n\tdisphome\n\t\tDisplays FPE Home Directory.\n\thelp\n\t\tDisplays this message.\n\tsh\n\t\tInteractive Shell\n\tdown [p]\n\t\tDownload a package from registry.\n")
     elif op == "sh":
         while True:
             try:
