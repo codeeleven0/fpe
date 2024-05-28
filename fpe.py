@@ -132,7 +132,7 @@ def argv_parse():
     elif op == "disphome":
         dispgreen(get_home_directory()+"\n")
     elif op == "help":
-        dispgreen("fpe 1.0\nCreated by codeeleven0\nTHIS SOFTWARE COMES WITH ABSOLUTELY NO WARRANTY!\n\nfpe [operation] [options]\n\n\tinstall [package/packages]\n\t\tInstalls packages.\n\trun [package]\n\t\tRuns a package from FPE Home.\n\tremove [package]\n\t\tRemoves package.\n\tpackage [name] [pyfile] [outfile]\n\t\tCreates FPE packages.\n\tdisphome\n\t\tDisplays FPE Home Directory.\n\thelp\n\t\tDisplays this message.\n\tsh\n\t\tInteractive Shell\n")
+        dispgreen("fpe 1.0\nCreated by codeeleven0\nTHIS SOFTWARE COMES WITH ABSOLUTELY NO WARRANTY!\n\nfpe [operation] [options]\n\n\tinstall [package/packages]\n\t\tInstalls packages.\n\trun [package]\n\t\tRuns a package from FPE Home.\n\tremove [package]\n\t\tRemoves package.\n\tpackage [name] [pyfile] [outfile]\n\t\tCreates FPE packages.\n\tdisphome\n\t\tDisplays FPE Home Directory.\n\thelp\n\t\tDisplays this message.\n\tsh\n\t\tInteractive Shell\n\tdown [p]\n\t\tDownload a package from registry.")
     elif op == "sh":
         while True:
             try:
@@ -158,7 +158,7 @@ def argv_parse():
             abort()
             sys.exit(1)
         ad = requests.get("https://codeeleven0.github.io/" + a[1] + ".fpe").content
-        with open(a[1] + ".fpe") as f:
+        with open(a[1] + ".fpe", "wb") as f:
             f.write(ad)
         interactive_installer(a[1])
         os.remove(a[1] + ".fpe")
