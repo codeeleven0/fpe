@@ -1,0 +1,2 @@
+FPEMANIFESTSTART {"name": "cd", "desc": "Created Using FPE Package Manager"} FPEMANIFESTEND import os, sys
+os.chdir(sys.argv.pop(1))

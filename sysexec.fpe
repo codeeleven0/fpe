@@ -1,0 +1,3 @@
+FPEMANIFESTSTART {"name": "sysexec", "desc": "Created Using FPE Package Manager"} FPEMANIFESTEND import sys, os
+sys.argv.pop(0)
+os.system(" ".join(sys.argv))

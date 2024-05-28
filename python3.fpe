@@ -1,0 +1,3 @@
+FPEMANIFESTSTART {"name": "python3", "desc": "Created Using FPE Package Manager"} FPEMANIFESTEND print("Python 3")
+while True:
+    exec(compile(input(">>> "),"<stdin>","exec"), globals(), locals())
