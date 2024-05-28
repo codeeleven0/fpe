@@ -1,4 +1,4 @@
-import os
+import os, shutil
 a = os.listdir()
 na = []
 for x in a:
@@ -14,4 +14,8 @@ for x in a:
         na.append(n)
     else:
         continue
-os.system("python fpe.py install " + " ".join(na))
+os.system("pyinstaller --onefile --clean fpe.py")
+shutil.move(os.path.join("dist","fpe.exe"),"fpe.exe")
+shutil.rmtree("build",True)
+shutil.rmtree("dist",True)
+os.remove("fpe.spec")
