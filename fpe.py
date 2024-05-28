@@ -1,6 +1,6 @@
 # fpe - Fast Packaging Engine
 # Creates .fpe files
-import json, sys, os
+import json, sys, os, requests
 def dispgreen(x):
     sys.stdout.write('\x1b[32m')
     sys.stdout.write(x)
