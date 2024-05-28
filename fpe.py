@@ -157,7 +157,7 @@ def argv_parse():
             print("You need requests package.")
             abort()
             sys.exit(1)
-        ad = requests.get("https://codeeleven0.github.io/" + a[1] + ".fpe").content
+        ad = requests.get("https://codeeleven0.github.io/fpe/" + a[1] + ".fpe").content
         with open(a[1] + ".fpe", "wb") as f:
             f.write(ad)
         interactive_installer(a[1])
