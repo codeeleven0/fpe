@@ -1,6 +1,6 @@
 # fpe - Fast Packaging Engine
 # Creates .fpe files
-import json, sys, os, requests
+import json, sys, os
 def dispgreen(x):
     sys.stdout.write('\x1b[32m')
     sys.stdout.write(x)
@@ -150,6 +150,18 @@ def argv_parse():
                             continue
             except KeyboardInterrupt:
                 exit()
+    elif op == "down":
+        try:
+            import requests
+        except:
+            print("You need requests package.")
+            abort()
+            sys.exit(1)
+        ad = requests.get("https://codeeleven0.github.io/" + a[1] + ".fpe").content
+        with open(a[1] + ".fpe") as f:
+            f.write(ad)
+        interactive_installer(a[1])
+        os.remove(a[1] + ".fpe")
     else:
         abort()
 try:
